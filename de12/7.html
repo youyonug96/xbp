@@ -1,17 +1,17 @@
 <code>
     <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
     <li style="background-color:#EFF;">import turtle</li>
-    <li style="background-color:#EEF;">#turtleプログラムを実行する</li>
-    <li style="background-color:#EFF;">player = turtle.Turtle() #turtleを作る</li>
-    <li style="background-color:#EEF;">player.color("purple") #turtleの色を決める</li>
-    <li style="background-color:#EFF;">player.shape("turtle") #turtleの模様を決める</li>
-    <li style="background-color:#EEF;">player.speed(5) #実行速度を決める。速度は数字が少ないほど素早く実行される</li>
-    <li style="background-color:#EFF;">screen = player.getscreen() #絵が描けるスクリーンを作る</li>
     <li style="background-color:#EEF;"></li>
-    <li style="background-color:#EFF;">for i in range(3) : #4回実行する</li>
-    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;player.forward(100) #100pxほ移動する</li>
-    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;player.left(120) #90度に曲げる</li>
+    <li style="background-color:#EFF;">player = turtle.Turtle()</li>
+    <li style="background-color:#EEF;">player.color("purple")</li>
+    <li style="background-color:#EFF;">player.shape("turtle")</li>
+    <li style="background-color:#EEF;">player.speed(0)</li>
+    <li style="background-color:#EFF;">screen = player.getscreen()</li>
     <li style="background-color:#EEF;"></li>
-    <li style="background-color:#EFF;">screen.listen() #プログラム活性</li>
-    <li style="background-color:#EEF;">screen.mainloop() #プログラムが動作し続ける状態を維持する</li>
+    <li style="background-color:#EFF;">for i in range(50) :</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;player.forward(100)</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;player.left(130)</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">screen.listen()</li>
+    <li style="background-color:#EEF;">screen.mainloop()</li>
     </ol></code>
