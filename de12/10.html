@@ -11,10 +11,91 @@
     <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
     <div>
          <!-- ①↓に文字を書いてみよう -->
-         <h1><div>賃貸情報のデータ分析</div></h1><br>
-         <br>
+         <h1><div>賃貸情報のデータ分析</div></h1>
+         <div>学生が家を探す際に、さらに大切に思うのは「家賃」　「間取り」　「学校までの距離」　だ。ですから、私はこのレポートで　「家賃」　「間取り」　「学校までの距離」に沿って資料を分析した上で、消去法でおすすめの家を紹介したいと思う。</div><br>
+         <div>まず、資料で学生たちが主に居住するワンルームと1Kの平均家賃を探してみると、</div><br>
+         <img src="images/원룸 평균야칭 .png" width="50%"><br>
+         <img src="images/1K .png" width="50%"><br><br>
+         <div>このような結果を確認できる。</div><br>
+         <h2><div>1.家賃</div></h2>
+         <div>平均を考慮して、6万円当たりの家を探して資料を分析すると、</div><br>
+         <img src="images/6만엔대 집.png" width="50%"><br><br>
+         <div>このように、６万円から６.99万円までの家を探すことができる。（まだ間取りは考慮しない。）</div><br>
+         <h2><div>2. 間取り</div></h2>
+         <div>学生の住居形態は、普通にワンルームと1kが多い。6万円あたりの家のうち、ワンルームと1kの家は</div><br>
+         <img src="images/6만엔 원룸.png" width="50%"><br><br>
+         <img src="images/6만엔 1k.png" width="50%"><br><br>
+         <div>このように簡略化できる。（家賃＋間取りの結果）</div><br>
+         <h2><div>3. 学校までの距離</div></h2>
+         <div>MMCを基準にして、到着まで30分以内を考えてみると、「家賃」　と　「間取り」　を考慮して</div><br>
+         <img src="images/합계시간.png" width="50%"><br><br>
+         <div>このように結果が出る。（家賃＋間取り＋合計時間）</div>
+         <h2><div>4. 面積</div></h2>
+         <div>20面積以上の家を探してみると、「家賃」　と　「間取り」、　「学校まで３０分以内」を考慮して</div><br>
+         <img src="images/20평수 이상.png" width="50%"><br><br>
+         <div>このように結果が出る。（家賃＋間取り＋合計時間＋面積）</div><br>
          <h1><div>おすすめエリアの紹介</div></h1><br>
+         <div>上記のような方法で消去法によりデータを簡略化してみると、条件は</div><br>
+         <ol>
+            <li>６万円〜６.９９万円</li>
+            <li>ワンルーム、1K</li>
+            <li>学校まで３０分以内</li>
+            <li>２０面積以上</li>
+         </ol>
+         <div>このようになる。結論的におすすめのエリアは、</div><br>
+         <img src="images/추천하는 집.png" width="50%"><br><br>
+         <div>このように整理できる。</div><br>
+         <br>
+         <br>
+         <div<code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">import pandas as pd</li>
+            <li style="background-color:#EEF;">import matplotlib.pyplot as plt</li>
+            <li style="background-color:#EFF;">pd.set_option('display.unicode.east_asian_width', True)</li>
+            <li style="background-color:#EEF;">plt.rcParams['font.family'] = 'IPAexGothic'</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">data_path = "data.csv"</li>
+            <li style="background-color:#EFF;">df_data = pd.read_csv(data_path,  encoding="utf-8-sig")</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">mask=(df_data["間取り"]=="ワンルーム")</li>
+            <li style="background-color:#EEF;">df_selected_roomtype=df_data[mask]</li>
+            <li style="background-color:#EFF;">df_selected_roomtype.loc[:, "家賃"].hist(range=(0,20),bins=40)</li>
+            <li style="background-color:#EEF;">plt.xlabel("家賃(万円)")</li>
+            <li style="background-color:#EFF;">plt.ylabel("件数")</li>
+            <li style="background-color:#EEF;">plt.xlim(0, 16)</li>
+            <li style="background-color:#EFF;">plt.title("ワンルーム家賃")</li>
+            <li style="background-color:#EEF;">plt.show()</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">mask=(df_data["間取り"]=="1K")</li>
+            <li style="background-color:#EFF;">df_selected_roomtype=df_data[mask]</li>
+            <li style="background-color:#EEF;">df_selected_roomtype.loc[:, "家賃"].hist(range=(0,20),bins=40)</li>
+            <li style="background-color:#EFF;">plt.xlabel("家賃(万円)")</li>
+            <li style="background-color:#EEF;">plt.ylabel("件数")</li>
+            <li style="background-color:#EFF;">plt.xlim(0, 16)</li>
+            <li style="background-color:#EEF;">plt.title("1Kの家賃")</li>
+            <li style="background-color:#EFF;">plt.show()</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">mask = ((6 &lt; df_data['家賃']) &amp; (df_data['家賃'] &lt; 7) &amp; (df_data['間取り'] == 'ワンルーム'))</li>
+            <li style="background-color:#EEF;">print(df_data[mask].sort_values(by="家賃", ascending=True).loc[:, ["家賃", "間取り", "URL"]])</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">mask = ((6 &lt; df_data['家賃']) &amp; (df_data['家賃'] &lt; 7) &amp; (df_data['間取り'] == '1K') &amp; (0 &lt; df_data['合計時間']) &amp; (df_data['合計時間'] &lt; 30))</li>
+            <li style="background-color:#EFF;">print(df_data[mask].sort_values(by="家賃", ascending=True).loc[:, ["家賃", "間取り", "URL", "合計時間"]])</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">mask = ((6 &lt; df_data['家賃']) &amp; (df_data['家賃'] &lt; 7) &amp; (df_data['間取り'] == '1K') &amp; (0 &lt; df_data['合計時間']))</li>
+            <li style="background-color:#EEF;">print(df_data[mask].sort_values(by="家賃", ascending=True).loc[:, ["家賃", "間取り", "URL", "合計時間"]])</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">mask = ((6 &lt; df_data['家賃']) &amp; (df_data['家賃'] &lt; 7) &amp; (df_data['間取り'] == '1K') &amp; (0 &lt; df_data['合計時間']) &amp; (df_data['合計時間'] &lt; 30) &amp; (df_data['面積'] &gt; 20))</li>
+            <li style="background-color:#EFF;">print(df_data[mask].sort_values(by="家賃", ascending=True).loc[:, ["家賃", "間取り", "合計時間", "URL", "面積"]])</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">mask = ((6 &lt; df_data['家賃']) &amp; (df_data['家賃'] &lt; 7) &amp; (df_data['間取り'] == '1K') &amp; (0 &lt; df_data['合計時間']) &amp; (df_data['合計時間'] &lt; 30) &amp; (df_data['面積'] &gt; 20))</li>
+            <li style="background-color:#EEF;">print(df_data[mask].sort_values(by="家賃", ascending=True).loc[:, ["URL"]])</li>
+            <li style="background-color:#EFF;"></li>
+            </ol></code></div>
 
+         
+
+         
+         
          <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
 
          <!-- ③↓に箇条書きをしてみよう -->
@@ -25,3 +106,4 @@
 
 </body>
 </html>
+
