@@ -1,0 +1,48 @@
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">import matplotlib.pyplot as plt</li>
+    <li style="background-color:#EEF;">plt.rcParams['font.family'] = 'IPAexGothic'</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">ratio = [128, 73, 24, 5, 2]</li>
+    <li style="background-color:#EFF;">labels = ['不織布(使い捨て)マスク', '布マスク', 'ポリウレタンマスク', 'その他にマスク', 'マスクはしない']</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">plt.pie(ratio, labels=labels, autopct='%.1f%%')</li>
+    <li style="background-color:#EEF;">plt.show()</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">import matplotlib.pyplot as plt</li>
+    <li style="background-color:#EFF;">plt.rcParams['font.family'] = 'IPAexGothic'</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">ratio = [35.5, 27.5, 20.6, 16.4]</li>
+    <li style="background-color:#EEF;">labels = ['KF94マスク', '使い捨てマスク', '綿マスク', 'その他のマスク']</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">plt.pie(ratio, labels=labels, autopct='%.1f%%')</li>
+    <li style="background-color:#EFF;">plt.show()</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">import matplotlib.pyplot as plt</li>
+    <li style="background-color:#EEF;">import numpy as np</li>
+    <li style="background-color:#EFF;">plt.rcParams['font.family'] = 'IPAexGothic'</li>
+    <li style="background-color:#EEF;">y = np.arange(4)</li>
+    <li style="background-color:#EFF;">years = ['息苦しい', '暑さや蒸れ', '耳の痛み', '肌荒れ']</li>
+    <li style="background-color:#EEF;">values = [80.9, 76.8, 30.4, 30]</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">plt.barh(y, values)</li>
+    <li style="background-color:#EFF;">plt.yticks(y, years)</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">plt.show()</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">import matplotlib.pyplot as plt</li>
+    <li style="background-color:#EEF;">import numpy as np</li>
+    <li style="background-color:#EFF;">plt.rcParams['font.family'] = 'IPAexGothic'</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">y = np.arange(4)</li>
+    <li style="background-color:#EEF;">years = ['息苦しい', '肌荒れが起きる', '耳が痛い', 'その他']</li>
+    <li style="background-color:#EFF;">values = [78.1, 44.3, 42.7, 34.9]</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">plt.barh(y, values, color='c')</li>
+    <li style="background-color:#EEF;"># plt.barh(y, values, color='dodgerblue')</li>
+    <li style="background-color:#EFF;"># plt.barh(y, values, color='C2')</li>
+    <li style="background-color:#EEF;"># plt.barh(y, values, color='#e35f62')</li>
+    <li style="background-color:#EFF;">plt.yticks(y, years)</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">plt.show()</li>
+    </ol></code>
