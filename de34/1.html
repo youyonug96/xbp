@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>Arduino</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+    <h1>Arduinoとは？</h1>
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+    <div>
+         <!-- ①↓に文字を書いてみよう -->
+         動作に必要な開発システムをArduinoのWebサイトからダウンロードできるオープンソースハードウェア。
+         <ul>
+            <li>プログラムを書く</li>
+            <li>センサーの値を読み込む</li>
+            <li>モーターを動かす</li>
+            <li>LEDを光らせたりと電子工作</li>     
+         </ul>
+         出典：<a href="https://www.internetacademy.jp/it/programming/programming-basic/types-and-usage-of-arduino.html" target="_blank">Arduinoとは？</a><br>
+         <br>
+         <h2>下準備</h2>
+        ArduinoとPCはUSB(typeA)で接続<br>
+        (他のtypeの場合、変換必)
+        <h2>設定順番</h2>
+        <ol>
+            <li>ボードの設定</li>
+        
+        「ツール」→「ボード」→「Arduino UNO/Genuino UNO」を選択<br>
+        <br>
+            <li>シリアルポートの設定</li>
+        「ツール」→「シリアルポート」で接続したUSBを選択<br>
+        </ol>
+        ⚠︎一度USBを抜いてみるとどれがArduinoなのかわかりやすい。<br>
+        <h2>ArduinoでLチカ</h2>
+        <ol>
+            <li>Lチカとは？</li>
+            LEDをチカチカさせることをLチカと言う。<br>
+            <br>
+            <li>LEDのプラス、マイナス</li>
+            長い方が＋、短い方がー。<br>
+            ＋はアノード<br>
+            ーはカソード<br>
+        </ol>
+        参考<br>
+                    <img src="images/1.jpg" width="30%"><br>
+        <br>
+        <h2>LEDとArduinoのピンを接続</h2>
+        LEDの長い方(＋)を13番ピン<br>
+        短い方(ー)をGNDにつなげる。<br>
+        ⚠︎↑は5V用に抵抗が入ったものを使っている。そうでないものを使う時は適宜、抵抗を入れること。<br>
+        <br>
+        <img src="images/2.png" width="40%"><br>
+        <br>
+        Lチカのプログラムは<a href="https://qiita.com/doyodoyo/items/29598bc44cf54b3b174b" target="_blank">ここ</a>で確認<br>
+        <br>
+        <h2>Arduinoで明るさを測定</h2>
+        明るさセンサー(CdS)で明るさを測定する<br>
+        CdSセルは暗いところにおくとセンサーの抵抗値が大きくなり、明るいところに置くと抵抗値が低くなる性質を持っている。<br>
+        <br>
+        配線<br>
+        ブレッドボードを使って、<br>
+        Arduinoの5Vー10kΩの抵抗ーCdSセルーArduinoのGNDの流れができるような配線する。<br>
+        その後、10kΩの抵抗とCdSセルが繋がっている列からArduinoのA1ピンに配線する。<br>
+        <br>
+        <img src="images/3.png" width="40%"><br>
+        <br>
+        プログラムの確認は<a href="https://qiita.com/doyodoyo/items/6f860e3cad6b60aff509" target="_blank">ここ</a>で確認<br>
+        <br>
+        <br>
+        <h1>日常の中の負、正の感情</h1><br>
+        負:悲しみ、不幸、苦痛、憤怒、憎悪、恐怖、自責、後悔、嫌悪、配信感など<br>
+        正:愛、誇り、挑戦、成功、成就、知恵、可愛い、激励、勇気、許しなど<br>
+    </div>
+
+</body>
+
