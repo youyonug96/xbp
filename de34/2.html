@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>Manipulate the light</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+    <h1>Neo pixelとは</h1>
+    フルカラーのLED。普通のLEDは1個をつけるために1個の電源端子（もしくはピン）が必要。<br>
+    しかし、Neo pixelは1個でも100個でも電源と制御用ピンだけで、多くのLEDを制御できるように設計されているメリットがある。<br>
+    <br>
+    <h2>Neo pixelの長所</h2>
+    <ul>
+        <li>それぞれのLEDに対する個別制御（色のON、OFF）が可能</li>
+        <li>連結配線が簡単</li>
+        <li>どんな形でも、お互いに接続が可能。</li>
+    </ul>
+    <h2>Neo pixelの短所</h2>
+    <ul>
+        <li>コントローラが必要</li>
+    </ul>
+    <h1>配線</h1>
+    NeoPixelの+5V(赤）ーーー>Arduinoの5V<br>
+    NeoPixelのDin（黄）ーーー>Arduinoの9番ピン(470Ω程度の抵抗を入れる)<br>
+    NeoPixelのGND（黒）ーーー>ArduinoのGND<br>
+    とつなぐ。<br>
+    Arduinoから電源を取ろうとすると連結は5個が限界。<br>
+    それ以上にすると、Arduinoが壊れるので、沢山連結する場合は+5V、GNDは外部電源とつなぐ必要がある。<br>
+    <a href="https://qiita.com/doyodoyo/items/1cc581b32f1a4458c5f2" target="_blank">参考</a><br>
+    <br>
+    <h1>代表的なNeo pixelの作品</h1>
+    <img src="images/4.png" width="30%"><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=roboholic84&logNo=220922977357" target="_blank">写真出典</a><br><br>
+    <img src="images/5.png" width="30%"><a href="https://kocoafab.cc/make/view/200" target="_blank">写真出典</a><br><br>
+
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+    <div>
+         <!-- ①↓に文字を書いてみよう -->
+
+         <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
+
+         <!-- ③↓に箇条書きをしてみよう -->
+
+         <!-- ④↓に外部リンクを作ってみよう -->
+
+    </div>
+
+</body>
+</html>
