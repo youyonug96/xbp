@@ -26,7 +26,7 @@
 					<div class="panel">
 						<ul id="topnav">
 							<li class="current-menu-item"><a href="index.html"><strong>トップページ</strong><br /><span>Top</span></a></li>
-                            <li><a href="flask_1.html"><strong>flask</strong><br /><span>プログラミング勉強</span></a>
+							<li><a href="flask_1.html"><strong>flask</strong><br /><span>プログラミング勉強</span></a>
 								<ul class="sub-menu">
 									<li><a href="flask_1.html">1回</a></li>
                                     <li><a href="flask_2.html">2回</a></li>
@@ -62,74 +62,47 @@
     <div id="wrapper">
 		<section id="main">
 			<section class="content">
-				<h3 class="heading">Pythonを使ったwebシステムとデータベースの勉強会</h3>
+				<h3 class="heading">個人プロジェクト計画紹介<br></h3>
 				<article class="post">
-					<p class="dateLabel">2023/10/10</p>
-					<h3>道用ゼミ1回</h3>
-					
-						<br>
-						flaskとは？<br>
-                        pythonを使って、webフレームワークを作ることができるプログラム<br>
-                        <br>
-                        <h2>基本的な形</h2><br>
-                        app.pyのファイルに<br>
-                        <br>
-                            a="こんにちは"<br>
-                            return render_template("index.html", txt=a)<br>
-                        <br>
-                        を入力したら？
-                        <br>
-                        <h2>index.htmlの場合</h2><br>
-                        <br>
-                        
-                                てすとです。<br>
-                                {{ txt }}　　←重要　<br>
-                        <br>
-                        <h3>結果</h3>
-                        てすとです。<br>
-                        こんにちは<br>
-                        <br>
-                        なぜ？<br>
-                        すでにapp.pyでa=こんにちはだと指定して、return~部分を使ってこの命令文を呼び出すことを指示している。<br>
-                        ですので、index.htmlで{{}}を使って命令文を呼び出すと画面に表示されるシステムである。
-                        <br>
-                        <br>
-                        <h2>for文の場合</h2>
-                        {% for data in list %} ← 命令を反復することを意味する<br>
-                        {% endfor %}<br>
-                        <br>
-                        <h2>index.htmlの場合</h2>
-                        <br>
-                            {% for i in range(10) %} <br>
-                                {{txt}} --- {{i}}<br>
-                                <br>
-                            {% endfor %} ←命令を終わらせることを意味する
-                        <br>
+					<p class="dateLabel">2023/12/08</p>
+					<h3>道用ゼミ3回</h3>
                     
-                        <h3>結果</h3>
-                        こんにちは---0<br>
-                        こんにちは---1<br>
-                        こんにちは---2<br>
-                        こんにちは---3<br>
-                        こんにちは---4<br>
-                        ...
-                        <br>
-                        になる。<br>
+                    <br>
+                    ▲flaskを活用したToDoアプリケーション作り<br>
+                    <br>
+                    <ul>
+                        <li>チェックボックス</li>
+                        <li>ハイライト</li>
+                        <li>内容追加</li>
+                    </ul>
+                    <br>
+                    ▲予想作業期間<br>
+                    <br>
+                    2023.12.08~2024.01.12<br>
+                    <br>
+                    ▲作業プログラム<br>
+                    <br>
+                    visual studio code2<br>
+                    <br>
+                    ▲参考資料<br>
+                    <br>
+                    google検索<br>
+                    chat.gpt<br>
+                    <br>
 
-						<br>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <br>
-                        
-						</p><br clear="all" />
 
-
+                    <br>
+                    <br>
+    <div class="pagenav">
+        <span class="prev"><a href="flask_2.html" rel="prev">&laquo; 前のページ</a></span>
+            <span class="next"><a href="flask_3.html" rel="next">次のページ &raquo;</a></span>
+                </div>
+                </aside>
+                </div>
 
     <div class="pagenav">
-        <span class="prev"><a href="index.html" rel="prev">&laquo; トップページ</a></span>
-        <span class="next"><a href="flask_2.html" rel="next">次のページ &raquo;</a></span>
+        <span class="prev"><a href="doyo_1.html" rel="prev">&laquo; 前のページ</a></span>
+        <span class="next"><a href="doyo_2.html" rel="next">次のページ &raquo;</a></span>
     </div>
 </aside>
 </div>
